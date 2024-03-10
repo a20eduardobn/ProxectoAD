@@ -11,14 +11,15 @@ public class Almacen {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(length = 4)
     private int idAlmacen;
-    @Column(length = 50)
+    @Column(length = 50,nullable = false)
     private String nombre;
     @Embedded
     private Direccion direccion;
     @Column(length = 6)
     private int capacidadCajas;
+    @Column(nullable = false)
     private boolean refrigerado;
-    @ManyToMany(mappedBy = "almacenes")
+    @ManyToMany(mappedBy = "almacenes", fetch = FetchType.LAZY)
     private List<Producto> productos = new ArrayList<>();
 
     public Almacen() {

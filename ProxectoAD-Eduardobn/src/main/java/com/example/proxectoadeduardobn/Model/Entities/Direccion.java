@@ -11,7 +11,7 @@ public class Direccion implements java.io.Serializable {
     private String ciudad;
     @Column(length = 20)
     private String provincia;
-    @Column(length = 5)
+    @Column(length = 5, nullable = false)
     private String codigoPostal;
 
     public Direccion() {

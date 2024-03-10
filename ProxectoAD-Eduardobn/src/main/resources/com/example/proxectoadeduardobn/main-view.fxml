@@ -11,165 +11,162 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.image.ImageView?>
-<TabPane xmlns="http://javafx.com/javafx"
-         xmlns:fx="http://javafx.com/fxml"
-         fx:controller="com.example.proxectoadeduardobn.Controller.AppController">
-    <tabs>
-        <Tab text="Proveedor">
-            <BorderPane>
-                <center>
-                    <GridPane alignment="CENTER" hgap="10" vgap="10" style="-fx-padding: 10px;">
-                        <rowConstraints>
-                            <RowConstraints vgrow="SOMETIMES"/>
-                            <RowConstraints vgrow="SOMETIMES"/>
-                            <RowConstraints vgrow="SOMETIMES"/>
-                            <RowConstraints vgrow="SOMETIMES"/>
-                            <RowConstraints vgrow="SOMETIMES"/>
-                            <RowConstraints vgrow="SOMETIMES"/>
-                            <RowConstraints vgrow="SOMETIMES"/>
-                            <RowConstraints vgrow="SOMETIMES"/>
-                        </rowConstraints>
-                        <Label text="CIF:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-                        <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-                        <Label text="Teléfono de Contacto:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-                        <Label text="Calle:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
-                        <Label text="Ciudad:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
-                        <Label text="Provincia:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
-                        <Label text="Código Postal:" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
 
-                        <TextField fx:id="cifProveedorField" editable="false" GridPane.columnIndex="1"
-                                   GridPane.rowIndex="0"/>
-                        <TextField fx:id="nomeProveedorField" editable="false" GridPane.columnIndex="1"
-                                   GridPane.rowIndex="1"/>
-                        <TextField fx:id="telfProveedorField" editable="false" GridPane.columnIndex="1"
-                                   GridPane.rowIndex="2"/>
-                        <TextField fx:id="calleProveedorField" editable="false" GridPane.columnIndex="1"
-                                   GridPane.rowIndex="3"/>
-                        <TextField fx:id="cidadeProveedorField" editable="false" GridPane.columnIndex="1"
-                                   GridPane.rowIndex="4"/>
-                        <TextField fx:id="provinciaProveedorField" editable="false" GridPane.columnIndex="1"
-                                   GridPane.rowIndex="5"/>
-                        <TextField fx:id="codPosProveedorField" editable="false" GridPane.columnIndex="1"
-                                   GridPane.rowIndex="6"/>
-                    </GridPane>
-                </center>
-                <bottom>
-                    <BorderPane>
-                        <right>
-                            <HBox alignment="CENTER" spacing="10" style="-fx-padding: 20px;">
-                                <Button text="Anterior" fx:id="btnAnteriorProveedor" onAction="#anteriorRegistro"/>
-                                <Button text="Siguiente" fx:id="btnSeguinteProveedor" onAction="#siguienteRegistro"/>
-                            </HBox>
-                        </right>
-                        <left>
-                            <HBox alignment="CENTER" spacing="10" style="-fx-padding: 20px;">
-                                <Button text="Añadir" fx:id="btnEngadir"/>
-                                <Button text="Editar" fx:id="btnEditar"/>
-                                <Button text="Eliminar" fx:id="btnEliminar"/>
-                            </HBox>
-                        </left>
-                    </BorderPane>
-                </bottom>
-            </BorderPane>
-        </Tab>
-        <Tab text="Almacen">
-            <BorderPane>
-                <center>
-                    <GridPane alignment="CENTER" hgap="10" vgap="10" style="-fx-padding: 10px;">
-                        <rowConstraints>
-                            <RowConstraints vgrow="SOMETIMES"/>
-                            <RowConstraints vgrow="SOMETIMES"/>
-                            <RowConstraints vgrow="SOMETIMES"/>
-                            <RowConstraints vgrow="SOMETIMES"/>
-                            <RowConstraints vgrow="SOMETIMES"/>
-                            <RowConstraints vgrow="SOMETIMES"/>
-                            <RowConstraints vgrow="SOMETIMES"/>
-                            <RowConstraints vgrow="SOMETIMES"/>
-                        </rowConstraints>
-                        <Label text="Nombre del Almacen:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-                        <TextField fx:id="nombreAlmacenField" editable="false" GridPane.columnIndex="1"
-                                   GridPane.rowIndex="0"/>
+<TabPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.proxectoadeduardobn.Controller.AppController">
+    <Tab text="Proveedor">
+        <BorderPane>
+            <center>
+                <GridPane alignment="CENTER" hgap="10" vgap="10" style="-fx-padding: 10px;">
+                    <rowConstraints>
+                        <RowConstraints vgrow="SOMETIMES"/>
+                        <RowConstraints vgrow="SOMETIMES"/>
+                        <RowConstraints vgrow="SOMETIMES"/>
+                        <RowConstraints vgrow="SOMETIMES"/>
+                        <RowConstraints vgrow="SOMETIMES"/>
+                        <RowConstraints vgrow="SOMETIMES"/>
+                        <RowConstraints vgrow="SOMETIMES"/>
+                        <RowConstraints vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <Label text="CIF:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <Label text="Teléfono de Contacto:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <Label text="Calle:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                    <Label text="Ciudad:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                    <Label text="Provincia:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+                    <Label text="Código Postal:" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
 
-                        <Label text="Capacidad de Cajas:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-                        <TextField fx:id="capacidadCajasField" editable="false" GridPane.columnIndex="1"
-                                   GridPane.rowIndex="1"/>
-
-                        <Label text="Refrigerado:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-                        <TextField fx:id="refrigeradoField" editable="false" GridPane.columnIndex="1"
-                                   GridPane.rowIndex="2"/>
-
-                        <Label text="Calle:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
-                        <TextField fx:id="calleAlmacenField" editable="false" GridPane.columnIndex="1"
-                                   GridPane.rowIndex="3"/>
-
-                        <Label text="Ciudad:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
-                        <TextField fx:id="ciudadAlmacenField" editable="false" GridPane.columnIndex="1"
-                                   GridPane.rowIndex="4"/>
-
-                        <Label text="Provincia:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
-                        <TextField fx:id="provinciaAlmacenField" editable="false" GridPane.columnIndex="1"
-                                   GridPane.rowIndex="5"/>
-
-                        <Label text="Código Postal:" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
-                        <TextField fx:id="codigoPostalAlmacenField" editable="false" GridPane.columnIndex="1"
-                                   GridPane.rowIndex="6"/>
-
-                    </GridPane>
-                </center>
-                <bottom>
-                    <BorderPane>
-                        <right>
-                            <HBox alignment="CENTER" spacing="10" style="-fx-padding: 20px;">
-                                <Button text="Anterior" fx:id="btnAnteriorAlmacen" onAction="#anteriorRegistro"/>
-                                <Button text="Siguiente" fx:id="btnSeguinteAlmacen" onAction="#siguienteRegistro"/>
-                            </HBox>
-                        </right>
-                        <left>
-                            <HBox alignment="CENTER" spacing="10" style="-fx-padding: 20px;">
-                                <Button text="Añadir" fx:id="btnEngadirAlmacen"/>
-                                <Button text="Editar" fx:id="btnEditarAlmacen"/>
-                                <Button text="Eliminar" fx:id="btnEliminarAlmacen"/>
-                            </HBox>
-                        </left>
-                    </BorderPane>
-                </bottom>
-            </BorderPane>
-        </Tab>
-        <Tab text="Producto">
-            <content>
+                    <TextField fx:id="cifProveedorField" editable="false" GridPane.columnIndex="1"
+                               GridPane.rowIndex="0"/>
+                    <TextField fx:id="nomeProveedorField" editable="false" GridPane.columnIndex="1"
+                               GridPane.rowIndex="1"/>
+                    <TextField fx:id="telfProveedorField" editable="false" GridPane.columnIndex="1"
+                               GridPane.rowIndex="2"/>
+                    <TextField fx:id="calleProveedorField" editable="false" GridPane.columnIndex="1"
+                               GridPane.rowIndex="3"/>
+                    <TextField fx:id="cidadeProveedorField" editable="false" GridPane.columnIndex="1"
+                               GridPane.rowIndex="4"/>
+                    <TextField fx:id="provinciaProveedorField" editable="false" GridPane.columnIndex="1"
+                               GridPane.rowIndex="5"/>
+                    <TextField fx:id="codPosProveedorField" editable="false" GridPane.columnIndex="1"
+                               GridPane.rowIndex="6"/>
+                </GridPane>
+            </center>
+            <bottom>
                 <BorderPane>
+                    <right>
+                        <HBox alignment="CENTER" spacing="10" style="-fx-padding: 20px;">
+                            <Button text="Anterior" fx:id="btnAnteriorProveedor" onAction="#anteriorRegistro"/>
+                            <Button text="Siguiente" fx:id="btnSeguinteProveedor" onAction="#siguienteRegistro"/>
+                        </HBox>
+                    </right>
                     <left>
-                        <VBox spacing="10" style="-fx-padding: 10px;">
-                            <Label text="Nombre:" />
-                            <TextField fx:id="nombreProductoField" />
-                            <Label text="Marca:" />
-                            <TextField fx:id="marcaProductoField" />
-                            <Label text="Modelo:" />
-                            <TextField fx:id="modeloProductoField" />
-                            <Label text="Precio:" />
-                            <TextField fx:id="precioProductoField" />
-                            <Label text="Stock:" />
-                            <TextField fx:id="stockProductoField" />
-                            <Label text="Proveedor:" />
-                            <!-- Utilizaremos un TextField no editable para mostrar el nombre del proveedor -->
-                            <TextField fx:id="proveedorProductoField" editable="false" />
-                        </VBox>
+                        <HBox alignment="CENTER" spacing="10" style="-fx-padding: 20px;">
+                            <Button text="Query Personalizada" fx:id="btnQueryProveedor" onAction="#openQueryDialog"/>
+                        </HBox>
                     </left>
-                    <center>
-                        <ImageView fx:id="imagenProductoView" preserveRatio="true" fitWidth="200" fitHeight="200" />
-                    </center>
-                    <bottom>
-                        <BorderPane>
-                            <right>
-                                <HBox alignment="CENTER" spacing="10" style="-fx-padding: 20px;">
-                                    <Button text="Anterior" fx:id="btnAnteriorProducto" onAction="#anteriorRegistro"/>
-                                    <Button text="Siguiente" fx:id="btnSeguinteProducto" onAction="#siguienteRegistro"/>
-                                </HBox>
-                            </right>
-                        </BorderPane>
-                    </bottom>
                 </BorderPane>
-            </content>
-        </Tab>
-    </tabs>
+            </bottom>
+        </BorderPane>
+    </Tab>
+    <Tab text="Almacen">
+        <BorderPane>
+            <center>
+                <GridPane alignment="CENTER" hgap="10" vgap="10" style="-fx-padding: 10px;">
+                    <rowConstraints>
+                        <RowConstraints vgrow="SOMETIMES"/>
+                        <RowConstraints vgrow="SOMETIMES"/>
+                        <RowConstraints vgrow="SOMETIMES"/>
+                        <RowConstraints vgrow="SOMETIMES"/>
+                        <RowConstraints vgrow="SOMETIMES"/>
+                        <RowConstraints vgrow="SOMETIMES"/>
+                        <RowConstraints vgrow="SOMETIMES"/>
+                        <RowConstraints vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <Label text="Nombre del Almacen:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <TextField fx:id="nombreAlmacenField" editable="false" GridPane.columnIndex="1"
+                               GridPane.rowIndex="0"/>
+
+                    <Label text="Capacidad de Cajas:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <TextField fx:id="capacidadCajasField" editable="false" GridPane.columnIndex="1"
+                               GridPane.rowIndex="1"/>
+
+                    <Label text="Refrigerado:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <TextField fx:id="refrigeradoField" editable="false" GridPane.columnIndex="1"
+                               GridPane.rowIndex="2"/>
+
+                    <Label text="Calle:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                    <TextField fx:id="calleAlmacenField" editable="false" GridPane.columnIndex="1"
+                               GridPane.rowIndex="3"/>
+
+                    <Label text="Ciudad:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                    <TextField fx:id="ciudadAlmacenField" editable="false" GridPane.columnIndex="1"
+                               GridPane.rowIndex="4"/>
+
+                    <Label text="Provincia:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+                    <TextField fx:id="provinciaAlmacenField" editable="false" GridPane.columnIndex="1"
+                               GridPane.rowIndex="5"/>
+
+                    <Label text="Código Postal:" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+                    <TextField fx:id="codigoPostalAlmacenField" editable="false" GridPane.columnIndex="1"
+                               GridPane.rowIndex="6"/>
+
+                </GridPane>
+            </center>
+            <bottom>
+                <BorderPane>
+                    <right>
+                        <HBox alignment="CENTER" spacing="10" style="-fx-padding: 20px;">
+                            <Button text="Anterior" fx:id="btnAnteriorAlmacen" onAction="#anteriorRegistro"/>
+                            <Button text="Siguiente" fx:id="btnSeguinteAlmacen" onAction="#siguienteRegistro"/>
+                        </HBox>
+                    </right>
+                    <left>
+                        <HBox alignment="CENTER" spacing="10" style="-fx-padding: 20px;">
+                            <Button text="Query Personalizada" fx:id="btnQueryAlmacen" onAction="#openQueryDialog"/>
+                        </HBox>
+                    </left>
+                </BorderPane>
+            </bottom>
+        </BorderPane>
+    </Tab>
+    <Tab text="Producto">
+        <content>
+            <BorderPane>
+                <left>
+                    <VBox spacing="10" style="-fx-padding: 10px;">
+                        <Label text="Nombre:"/>
+                        <TextField fx:id="nombreProductoField"/>
+                        <Label text="Marca:"/>
+                        <TextField fx:id="marcaProductoField"/>
+                        <Label text="Modelo:"/>
+                        <TextField fx:id="modeloProductoField"/>
+                        <Label text="Precio:"/>
+                        <TextField fx:id="precioProductoField"/>
+                        <Label text="Stock:"/>
+                        <TextField fx:id="stockProductoField"/>
+                        <Label text="Proveedor:"/>
+                        <TextField fx:id="proveedorProductoField" editable="false"/>
+                    </VBox>
+                </left>
+                <center>
+                    <ImageView fx:id="imagenProductoView" preserveRatio="true" fitWidth="200" fitHeight="200"/>
+                </center>
+                <bottom>
+                    <BorderPane>
+                        <right>
+                            <HBox alignment="CENTER" spacing="10" style="-fx-padding: 20px;">
+                                <Button text="Anterior" fx:id="btnAnteriorProducto" onAction="#anteriorRegistro"/>
+                                <Button text="Siguiente" fx:id="btnSeguinteProducto" onAction="#siguienteRegistro"/>
+                            </HBox>
+                        </right>
+                        <left>
+                            <HBox alignment="CENTER" spacing="10" style="-fx-padding: 20px;">
+                                <Button text="Query Personalizada" fx:id="btnQueryProducto" onAction="#openQueryDialog"/>
+                            </HBox>
+                        </left>
+                    </BorderPane>
+                </bottom>
+            </BorderPane>
+        </content>
+    </Tab>
 </TabPane>

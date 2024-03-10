@@ -1,10 +1,13 @@
 package com.example.proxectoadeduardobn.Model.DAO;
 
 import com.example.proxectoadeduardobn.Model.DTO.ProductoDTO;
+import com.example.proxectoadeduardobn.Model.Entities.Almacen;
 import com.example.proxectoadeduardobn.Model.Entities.Producto;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ProductoDAOImpl implements DAO<Producto>{
 
@@ -69,5 +72,11 @@ public class ProductoDAOImpl implements DAO<Producto>{
     @Override
     public void deleteAll() {
         eManager.createQuery("DELETE FROM Producto").executeUpdate();
+    }
+
+    @Override
+    public List<Producto> executeCustomQuery(String s) {
+        Query q = eManager.createNativeQuery(s, Producto.class);
+        return q.getResultList();
     }
 }

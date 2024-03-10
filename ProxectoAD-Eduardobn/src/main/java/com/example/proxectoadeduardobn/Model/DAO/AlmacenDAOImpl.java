@@ -2,6 +2,9 @@ package com.example.proxectoadeduardobn.Model.DAO;
 
 import com.example.proxectoadeduardobn.Model.Entities.Almacen;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
+
+import java.util.List;
 
 
 public class AlmacenDAOImpl implements DAO<Almacen>{
@@ -41,6 +44,12 @@ public class AlmacenDAOImpl implements DAO<Almacen>{
     @Override
     public void deleteAll() {
         eManager.createQuery("DELETE FROM Almacen").executeUpdate();
+    }
+
+    @Override
+    public List<Almacen> executeCustomQuery(String s) {
+        Query q = eManager.createNativeQuery(s,Almacen.class);
+        return q.getResultList();
     }
 }
 
