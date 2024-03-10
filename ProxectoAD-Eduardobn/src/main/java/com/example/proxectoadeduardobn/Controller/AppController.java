@@ -10,14 +10,24 @@ import com.example.proxectoadeduardobn.Model.EntityManagerUtil;
 import jakarta.persistence.EntityManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
 
 public class AppController {
+
+    @FXML
+    private Button btnQueryAlmacen;
+
+    @FXML
+    private Button btnQueryProveedor;
+
+    @FXML
+    private Button btnQueryProducto;
 
     @FXML
     private TextField cifProveedorField;
@@ -47,15 +57,6 @@ public class AppController {
     private Button btnSeguinteProveedor;
 
     @FXML
-    private Button btnEngadir;
-
-    @FXML
-    private Button btnEditar;
-
-    @FXML
-    private Button btnEliminar;
-
-    @FXML
     private TextField nombreAlmacenField;
 
     @FXML
@@ -81,15 +82,6 @@ public class AppController {
 
     @FXML
     private Button btnSeguinteAlmacen;
-
-    @FXML
-    private Button btnEngadirAlmacen;
-
-    @FXML
-    private Button btnEditarAlmacen;
-
-    @FXML
-    private Button btnEliminarAlmacen;
 
     @FXML
     private TextField nombreProductoField;
@@ -240,6 +232,26 @@ public class AppController {
             }
         } catch (Exception e) {
             System.out.println("Error de conexión");
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void openQueryDialog(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/com/example/proxectoadeduardobn/queryDialog.fxml"));
+            DialogPane dialogPane = loader.load();
+
+            QueryDialogController controller = loader.getController();
+            ButtonType exitButton = new ButtonType("Send Query");
+            dialogPane.getButtonTypes().add(exitButton);
+
+            Dialog<Void> dialog = new Dialog<>();
+            dialog.setDialogPane(dialogPane);
+
+            dialog.showAndWait();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

@@ -11,9 +11,9 @@ public class Proveedor {
     @Id
     @Column(length = 9)
     private String cif;
-    @Column(length = 50)
+    @Column(length = 50, nullable = false)
     private String nombre;
-    @Column(length = 10)
+    @Column(length = 10, nullable = false)
     private String telefonoContacto;
     @OneToMany(mappedBy = "proveedor")
     private List<Producto> productos = new ArrayList<>();

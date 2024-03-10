@@ -40,7 +40,7 @@ public class Producto {
     @ManyToOne
     @JoinColumn(name = "cifProveedor")
     private Proveedor proveedor;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "ProductoAlmacen",
             joinColumns = @JoinColumn(name = "idProducto"),
